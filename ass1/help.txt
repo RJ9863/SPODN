@@ -1,0 +1,1 @@
+java -cp C:\SicXe\sictools.jar sic.Sim .\<filename>.asm

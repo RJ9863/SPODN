@@ -37,7 +37,7 @@ factl	COMP	#1		; compute factorial of a
 		ADDR	A,S		; a -> s
 		SUB		#1		; a <- a-1
 		
-		STA		asave
+		STA		asave	; push
 		LDA		#3
 		STS		STACK,X
 		ADDR	A,X
@@ -49,7 +49,7 @@ factl	COMP	#1		; compute factorial of a
 		
 		JSUB	factl	; a <- f(n-1)
 		
-		STA		asave
+		STA		asave	; pop
 		LDA		#3
 		SUBR	A,X
 		LDL		STACK,X
@@ -86,7 +86,7 @@ print	LDS		#0
 		COMP	#0
 		JEQ		endp
 		
-		STA		asave
+		STA		asave	; push
 		LDA		#3
 		STS		STACK,X
 		ADDR	A,X
@@ -98,7 +98,7 @@ print	LDS		#0
 		
 		JSUB	print
 		
-		STA		asave
+		STA		asave	; pop
 		LDA		#3
 		SUBR	A,X
 		LDL		STACK,X
