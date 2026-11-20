@@ -9,7 +9,7 @@ waitin	TD		stdin
 		ADDR	A,B
 		COMPR	B,T
 		JEQ		halt
-		COMP	0x00
+		COMP	#0
 		JEQ		halt
 waitout	TD		stdout
 		JEQ		waitout

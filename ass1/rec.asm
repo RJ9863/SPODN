@@ -12,6 +12,8 @@ startn	JSUB	readc	; read first char
 starti	JSUB	readc	; read chars until CR char
 		COMP	cret
 		JEQ		fact
+		COMP    lfd
+        JEQ     fact
 		SUB		zero
 		LDS		sum
 		LDT		#10
