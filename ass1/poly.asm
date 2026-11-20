@@ -1,6 +1,6 @@
 poly	START	0
 first	LDX		curdeg
-		LDA		xval
+		LDA		#3
 		MULR	A,X
 		LDA		cofs,X
 		MUL		xton
@@ -19,7 +19,6 @@ first	LDX		curdeg
 halt	J      	halt
 . data
 . inputs
-xval	WORD	3
 curdeg	WORD	0
 maxdeg	WORD	4
 xton	WORD	1
